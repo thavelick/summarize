@@ -8,8 +8,8 @@ Installation
 
 First install nltk and numpy:
 
-    pip install nltk
-    pip install numpy
+    sudo pip install nltk
+    sudo pip install numpy
 
 Then install the punkt and stopwords nltk packages:
 
