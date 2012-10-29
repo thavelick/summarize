@@ -1,0 +1,36 @@
+.. Copyright (C) 2010 Tristan Havelick
+
+===========
+Summarizers
+===========
+
+Overview
+~~~~~~~~
+
+Summarizers provide a short summary or abstract from a longer document.
+
+	>>> import summarize
+
+SimpleSummarizer
+~~~~~~~~~~~~~~~~
+	
+A SimpleSummarizer makes a summary by using sentences with the most frequent 
+words
+	
+	>>> ss = summarize.SimpleSummarizer()
+	>>> input = "NLTK is a python library for working human-written text. Summarize is a package that uses NLTK to create summaries."
+	>>> ss.summarize(input, 1)
+	'NLTK is a python library for working human-written text.'
+	
+You can specify any number of sentenecs in the summary as you like.
+
+	>>> input = "NLTK is a python library for working human-written text. Summarize is a package that uses NLTK to create summaries. A Summariser is really cool. I don't think there are any other python summarisers."
+	>>> ss.summarize(input, 2)
+	"NLTK is a python library for working human-written text.  I don't think there are any other python summarisers."
+
+Unlike the original algorithm from Classifier4J, this summarizer works
+correctly with punctuation other than periods:
+
+	>>> input = "NLTK is a python library for working human-written text! Summarize is a package that uses NLTK to create summaries."
+	>>> ss.summarize(input, 1)
+	'NLTK is a python library for working human-written text!'
