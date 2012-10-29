@@ -1,8 +1,8 @@
 # Simple Summarizer 
-# Copyright (C) 2010 Tristan Havelick 
+# Copyright (C) 2010-2012 Tristan Havelick 
 # Author: Tristan Havelick <tristan@havelick.com>
-# URL: <http://www.tristanhavelick.com>
-# $Id$
+# URL: <https://github.com/thavelick/summarize/>
+# For license information, see LICENSE.TXT
 
 """
 A summarizer based on the algorithm found in Classifier4J by Nick Lothan.      
